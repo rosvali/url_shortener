@@ -1,4 +1,6 @@
 class UrlsController < ApplicationController
+  before_action :id_url_exists?, only: [:show]
+
   def new
     @url = Url.new
   end
@@ -18,10 +20,20 @@ class UrlsController < ApplicationController
   end
 
   def show
-    puts "Test"
+    @url = find_url
+
+    redirect_to @url.original_url
   end
 
   private
+
+  def find_url
+    Url.find_by(id_url: params[:id_url])
+  end
+
+  def id_url_exists?
+    redirect_to urls_path unless !find_url.nil?
+  end
 
   def url_params
     params.require(:url).permit(:original_url)

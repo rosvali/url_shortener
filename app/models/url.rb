@@ -4,7 +4,7 @@ class Url < ApplicationRecord
 	validates :original_url, presence: true
 
 	def custom_url
-		"shorturl.com/#{id_url}" if id_url
+		"http://localhost:3000/#{id_url}" if id_url
 	end
 
 	def generate_id_url
