@@ -1,24 +1,15 @@
-# README
+# Url Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create a shorter url and save it in database
 
-Things you may want to cover:
+### Install
 
-* Ruby version
+Clone the project
+```
+git clone git@github.com:rosvali/url_shortener.git
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Launch the server
+```
+rails db:migrate && bundle && rails s
+```
