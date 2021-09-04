@@ -1,0 +1,7 @@
+<h1>Custom your URLs</h1>
+
+<%= form_for @url do |f| %>
+  <%= f.text_field :original_url, placeholder: 'Enter an Url'%>
+  <br/>
+  <%= f.submit 'Generate a short url' %>
+<% end %>
