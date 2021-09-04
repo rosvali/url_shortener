@@ -6,9 +6,9 @@ class UrlsController < ApplicationController
   end
 
   def create
-    url = Url.new(url_params)
-    if url.save
-      url.update(id_url: url.generate_id_url)
+    @url = Url.new(url_params)
+    if @url.save
+      @url.update(id_url: @url.generate_id_url)
       redirect_to urls_path
     else
       render 'new'
