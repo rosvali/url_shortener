@@ -1,9 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  original_url: MyString
-  custom_url: MyString
+url1:
+  original_url: "https://github.com/rosvali/url_shortener"
 
-two:
-  original_url: MyString
-  custom_url: MyString
+url2:
+  original_url: "https://42.fr"
